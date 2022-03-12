@@ -8,14 +8,14 @@ package service;
  * @date 2022年3月10日下午7:08:11
  *
  */
-public class TeamExcept extends Exception {
+public class TeamException extends Exception {
 	static final long serialVersionUID = -3387514229948L;
 
-	public TeamExcept() {
+	public TeamException() {
 		super();
 	}
 
-	public TeamExcept(String msg) {
+	public TeamException(String msg) {
 		super(msg);
 	}
 }

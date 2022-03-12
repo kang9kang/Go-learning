@@ -111,13 +111,13 @@ public class NameListService {
 	 * @return
 	 * @throws TeamExcept
 	 */
-	public Employee getEmployee(int id) throws TeamExcept {
+	public Employee getEmployee(int id) throws TeamException {
 		for (int i = 0; i < employees.length; i++) {
 			if (employees[i].getId() == id) {
 				return employees[i];
 			}
 		}
 
-		throw new TeamExcept("找不到指定员工");
+		throw new TeamException("找不到指定员工");
 	}
 }

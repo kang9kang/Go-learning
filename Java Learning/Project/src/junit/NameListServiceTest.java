@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import domain.Employee;
 import service.NameListService;
-import service.TeamExcept;
+import service.TeamException;
 
 /**
  * 
@@ -33,7 +33,7 @@ public class NameListServiceTest {
 		try {
 			Employee employee = service.getEmployee(id);
 			System.out.println(employee);
-		} catch (TeamExcept e) {
+		} catch (TeamException e) {
 			System.out.println(e.getMessage());
 		}
 	}

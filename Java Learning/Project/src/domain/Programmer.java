@@ -3,7 +3,7 @@ package domain;
 import service.Status;
 
 public class Programmer extends Employee {
-	private int memberid;// 开发团队中的id
+	private int memberId;// 开发团队中的id
 	private Status status = Status.FREE;
 	private Equipment equipment;
 
@@ -16,12 +16,12 @@ public class Programmer extends Employee {
 		this.equipment = equipment;
 	}
 
-	public int getMemberid() {
-		return memberid;
+	public int getMemberId() {
+		return memberId;
 	}
 
-	public void setMemberid(int memberid) {
-		this.memberid = memberid;
+	public void setMemberid(int memberId) {
+		this.memberId = memberId;
 	}
 
 	public Status getStatus() {
@@ -43,5 +43,9 @@ public class Programmer extends Employee {
 	@Override
 	public String toString() {
 		return getDetails() + "\t程序员\t" + status + "\t\t\t" + equipment.getDescription();
+	}
+
+	public String getDetailsForTeam() {
+		return memberId + "/" + getId() + "\t" + getName() + "\t" + getAge() + "\t" + getSalary() + "\t程序员";
 	}
 }
